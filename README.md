@@ -44,7 +44,8 @@ CampusResourceBookingSystem/
 ---
 
 ## 📊 UML Diagrams
-- Use Case Diagram ✅
+- Use Case Diagram ✅ ![Use Case Diagram](use_case_diagram.png)
+
 - Class Diagram ✅
 - (Add Activity + Sequence diagrams if available)
 
