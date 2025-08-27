@@ -29,44 +29,10 @@ The **Campus Resource Booking System** is a Java + DBMS-based application that h
 
 ---
 
-## 📂 Project Structure
-```
-CampusResourceBookingSystem/
-│── src/                # Java source files
-│   ├── model/          # Classes (User, Resource, Booking, Admin, etc.)
-│   ├── dao/            # Database access objects
-│   ├── servlet/        # Servlets (Controllers)
-│── web/                # JSP & static web files
-│── db/                 # SQL scripts
-│── README.md
-```
-
----
-
 ## 📊 UML Diagrams
-- Use Case Diagram ✅ ![Use Case Diagram](use_case_diagram.png)
+- Use Case Diagram ->  ![Use Case Diagram](use_case_diagram.png)
 
-- Class Diagram ✅
-- (Add Activity + Sequence diagrams if available)
+- Class Diagram -> ![Class Diagram](class_diagram.png)
+  
 
----
 
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/campus-resource-booking-system.git
-   ```
-2. Import project into **Eclipse/IntelliJ**.
-3. Set up MySQL database using `db/schema.sql`.
-4. Run on **Tomcat server**.
-5. Open in browser: `http://localhost:8080/CampusResourceBookingSystem`.
-
----
-
-## 👨‍💻 Contributors
-- Jai Surya S (Sri Eshwar College of Engineering)
-
----
-
-## 📜 License
-This project is for educational purposes only.
