@@ -18,7 +18,6 @@ The **Campus Resource Booking System** is a Java + DBMS-based application that h
 ## 🛠 Tech Stack
 ### Frontend
 - HTML, CSS, JavaScript
-- Bootstrap (for UI design)
 
 ### Backend
 - Java (OOP concepts)
