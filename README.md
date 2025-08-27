@@ -1,4 +1,4 @@
-# Campus Resource Booking System
+# Resourcify - Campus Resource Booking System
 
 ## 📌 Project Overview
 The **Campus Resource Booking System** is a Java + DBMS-based application that helps students and faculty easily book and manage campus resources such as classrooms, labs, seminar halls, and sports facilities. The system ensures availability, avoids conflicts, and simplifies the approval process.
