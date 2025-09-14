@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-# Resourcify
 
-A Java-based resource management system for educational institutions.
-
-## Project Structure
-
-resourcify/
-├── src/
-│           │   ├── User.java              (Abstract Base Class)
-│           │   ├── Faculty.java           (Faculty Implementation)
-│           │   ├── Admin.java             (Admin Implementation)
-│           │   ├── Resource.java          (Resource Model)
-│           └── ui/
-│               └── ConsoleUI.java         (Console Interface)
-│   └── mysql-connector-java.jar          (MySQL JDBC Driver)
-└── Resourcify.jar                        (Compiled JAR file)
-
-
-1. Create the database using the SQL script in `database/resourcify_db.sql`
-3. Configure the database connection in `DatabaseManager.java`
-
-## Features
-
-- User Management (Students, Faculty, Admins)
-- Resource Management
-- Booking System
-- Console-based User Interface
-
-## Requirements
-
-- Java 8 or higher
-- MySQL Server
-- MySQL JDBC Driver
-=======
 # Resourcify - Campus Resource Booking System
 
 ## 📌 Project Overview
