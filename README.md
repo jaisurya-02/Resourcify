@@ -1,39 +1,24 @@
+<<<<<<< HEAD
 # Resourcify
 
 A Java-based resource management system for educational institutions.
 
 ## Project Structure
 
-```
 resourcify/
 ├── src/
-│   └── com/
-│       └── resourcify/
-│           ├── ResourcifyApp.java          (Main Application)
-│           ├── database/
-│           │   └── DatabaseManager.java    (JDBC Connection & Operations)
-│           ├── model/
 │           │   ├── User.java              (Abstract Base Class)
-│           │   ├── Student.java           (Student Implementation)
 │           │   ├── Faculty.java           (Faculty Implementation)
 │           │   ├── Admin.java             (Admin Implementation)
 │           │   ├── Resource.java          (Resource Model)
-│           │   └── Booking.java           (Booking Model)
 │           └── ui/
 │               └── ConsoleUI.java         (Console Interface)
-├── database/
-│   └── resourcify_db.sql                 (Database Schema)
-├── lib/
 │   └── mysql-connector-java.jar          (MySQL JDBC Driver)
 └── Resourcify.jar                        (Compiled JAR file)
-```
 
-## Setup Instructions
 
 1. Create the database using the SQL script in `database/resourcify_db.sql`
-2. Make sure you have the MySQL JDBC driver in the `lib` folder
 3. Configure the database connection in `DatabaseManager.java`
-4. Compile the project and run `ResourcifyApp`
 
 ## Features
 
@@ -47,3 +32,43 @@ resourcify/
 - Java 8 or higher
 - MySQL Server
 - MySQL JDBC Driver
+=======
+# Resourcify - Campus Resource Booking System
+
+## 📌 Project Overview
+The **Campus Resource Booking System** is a Java + DBMS-based application that helps students and faculty easily book and manage campus resources such as classrooms, labs, seminar halls, and sports facilities. The system ensures availability, avoids conflicts, and simplifies the approval process.
+
+---
+
+## 🎯 Features
+- User login and authentication (Students, Faculty, Admin).
+- Search and book available resources.
+- View and cancel bookings.
+- Admin can add/update resources.
+- Admin can approve/reject booking requests.
+- Database integration for storing resource and booking details.
+
+---
+
+## 🛠 Tech Stack
+### Frontend
+- HTML, CSS, JavaScript
+
+### Backend
+- Java (OOP concepts)
+- Java Servlets / JSP
+- JDBC for database connectivity
+
+### Database
+- MySQL (Booking & Resource tables)
+
+---
+
+## 📊 UML Diagrams
+- Use Case Diagram ->  ![Use Case Diagram](use_case_diagram.png)
+
+- Class Diagram -> ![Class Diagram](class_diagram.png)
+  
+
+
+>>>>>>> 04a978768386741d5efba558ccdb1d5cf62641e1
