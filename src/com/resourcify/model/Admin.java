@@ -28,11 +28,7 @@ public class Admin extends User {
         DatabaseManager dbManager = DatabaseManager.getInstance();
         boolean success = dbManager.addResource(name, type, availability);
         
-        if (success) {
-            System.out.println("Resource added successfully: " + name);
-        } else {
-            System.out.println("Failed to add resource: " + name);
-        }
+        
         
         return success;
     }
