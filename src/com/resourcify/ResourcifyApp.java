@@ -7,27 +7,15 @@ import com.resourcify.ui.ConsoleUI;
 import java.util.Scanner;
 
 public class ResourcifyApp {
-    private static DatabaseManager dbManager;
-    private static ConsoleUI ui;
     private static User currentUser;
     private static Scanner scanner;
     
     public static void main(String[] args) {
-        System.out.println("=".repeat(50));
         System.out.println("     WELCOME TO RESOURCIFY");
         System.out.println("   Campus Resource Booking System");
-        System.out.println("=".repeat(50));
-        
-        // Initialize components
-        dbManager = DatabaseManager.getInstance();
-        ui = new ConsoleUI();
+            
         scanner = new Scanner(System.in);
-        
-        // Check database connection
-        if (dbManager.getConnection() == null) {
-            System.err.println("Failed to connect to database. Please check your MySQL configuration.");
-            System.err.println("Make sure MySQL is running and update the connection details in DatabaseManager.java");
-            return;
+    
         }
         
         // Main application loop
@@ -63,9 +51,7 @@ public class ResourcifyApp {
                 }
             }
         }
-        
-        // Cleanup
-        dbManager.closeConnection();
+                
         scanner.close();
         System.out.println("\nThank you for using Resourcify! Goodbye!");
     }
@@ -80,23 +66,6 @@ public class ResourcifyApp {
         System.out.print("\nEnter your choice: ");
     }
     
-    private static void showSampleCredentials() {
-        System.out.println("\n" + "=".repeat(40));
-        System.out.println("         SAMPLE CREDENTIALS");
-        System.out.println("=".repeat(40));
-        System.out.println("ADMIN:");
-        System.out.println("  Email: admin@university.edu");
-        System.out.println("  Password: admin123");
-        System.out.println("\nFACULTY:");
-        System.out.println("  Email: smith@university.edu");
-        System.out.println("  Password: faculty123");
-        System.out.println("\nSTUDENT:");
-        System.out.println("  Email: john@student.edu");
-        System.out.println("  Password: student123");
-        System.out.println("\n  Email: jane@student.edu");
-        System.out.println("  Password: student456");
-        System.out.println("=".repeat(40));
-    }
     
     private static void login() {
         System.out.println("\n" + "-".repeat(25));
@@ -104,19 +73,17 @@ public class ResourcifyApp {
         System.out.println("-".repeat(25));
         
         System.out.print("Email: ");
-        String email = scanner.nextLine().trim();
+        String email = scanner.nextLine();
         
         System.out.print("Password: ");
-        String password = scanner.nextLine().trim();
-        
-        User user = dbManager.authenticateUser(email, password);
+        String password = scanner.nextLine();
         
         if (user != null) {
             currentUser = user;
-            System.out.println("\n✓ Login successful!");
+            System.out.println("\n Login successful!");
             System.out.println("Welcome, " + user.getName() + " (" + user.getRole().toUpperCase() + ")");
         } else {
-            System.out.println("\n✗ Invalid credentials. Please try again.");
+            System.out.println("\n Invalid credentials. Please try again.");
         }
     }
     
@@ -268,9 +235,7 @@ public class ResourcifyApp {
     }
     
     private static void bookResource(Object user) {
-        System.out.println("\n" + "-".repeat(30));
         System.out.println("         BOOK RESOURCE");
-        System.out.println("-".repeat(30));
         
         // Show available resources
         ui.displayResources(dbManager.getAllResources());
@@ -292,7 +257,7 @@ public class ResourcifyApp {
         }
         
         if (success) {
-            System.out.println("\n✓ Booking request submitted successfully!");
+            System.out.println("\n Booking request submitted successfully!");
         }
     }
     
@@ -319,9 +284,9 @@ public class ResourcifyApp {
         }
         
         if (success) {
-            System.out.println("\n✓ Booking cancelled successfully!");
+            System.out.println("\n Booking cancelled successfully!");
         } else {
-            System.out.println("\n✗ Failed to cancel booking.");
+            System.out.println("\n Failed to cancel booking.");
         }
     }
     
@@ -391,43 +356,7 @@ public class ResourcifyApp {
         }
     }
     
-    private static void manageBookingApprovals(Object user) {
-        System.out.println("\n" + "-".repeat(30));
-        System.out.println("    MANAGE BOOKINGS");
-        System.out.println("-".repeat(30));
-        
-        // Show all bookings
-        if (user instanceof Faculty) {
-            ui.displayBookings(((Faculty) user).viewAllBookings());
-        } else if (user instanceof Admin) {
-            ui.displayBookings(((Admin) user).manageBookings());
-        }
-        
-        System.out.print("\nEnter Booking ID to approve/reject: ");
-        int bookingId = getIntInput();
-        
-        System.out.println("1. Approve");
-        System.out.println("2. Reject");
-        System.out.print("Choose action: ");
-        int action = getIntInput();
-        
-        boolean success = false;
-        if (action == 1) {
-            if (user instanceof Faculty) {
-                success = ((Faculty) user).approveBooking(bookingId);
-            } else if (user instanceof Admin) {
-                success = ((Admin) user).approveBooking(bookingId);
-            }
-        } else if (action == 2) {
-            if (user instanceof Faculty) {
-                success = ((Faculty) user).rejectBooking(bookingId);
-            } else if (user instanceof Admin) {
-                success = ((Admin) user).rejectBooking(bookingId);
-            }
-        } else {
-            System.out.println("Invalid action.");
-        }
-    }
+    
     
     private static void createUserAccount(Admin admin) {
         System.out.println("\n" + "-".repeat(30));

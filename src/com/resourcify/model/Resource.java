@@ -13,13 +13,11 @@ public class Resource {
         this.availability = availability;
     }
     
-    // Getters
     public int getResourceId() { return resourceId; }
     public String getResourceName() { return resourceName; }
     public String getType() { return type; }
     public boolean isAvailable() { return availability; }
     
-    // Setters
     public void setResourceName(String resourceName) { this.resourceName = resourceName; }
     public void setType(String type) { this.type = type; }
     public void setAvailability(boolean availability) { this.availability = availability; }

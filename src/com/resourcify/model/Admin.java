@@ -24,19 +24,6 @@ public class Admin extends User {
         return "admin";
     }
     
-    public boolean addResource(String name, String type, boolean availability) {
-        DatabaseManager dbManager = DatabaseManager.getInstance();
-        boolean success = dbManager.addResource(name, type, availability);
-        
-        if (success) {
-            System.out.println("Resource added successfully: " + name);
-        } else {
-            System.out.println("Failed to add resource: " + name);
-        }
-        
-        return success;
-    }
-    
     public boolean removeResource(int resourceId) {
         DatabaseManager dbManager = DatabaseManager.getInstance();
         boolean success = dbManager.removeResource(resourceId);

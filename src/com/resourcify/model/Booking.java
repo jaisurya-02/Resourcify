@@ -7,8 +7,6 @@ public class Booking {
     private String date;
     private String timeSlot;
     private String status;
-    
-    // Additional fields for display purposes
     private String resourceName;
     private String resourceType;
     private String userName;
@@ -22,7 +20,7 @@ public class Booking {
         this.status = status;
     }
     
-    // Getters
+    
     public int getBookingId() { return bookingId; }
     public int getUserId() { return userId; }
     public int getResourceId() { return resourceId; }
@@ -33,7 +31,7 @@ public class Booking {
     public String getResourceType() { return resourceType; }
     public String getUserName() { return userName; }
     
-    // Setters
+    
     public void setDate(String date) { this.date = date; }
     public void setTimeSlot(String timeSlot) { this.timeSlot = timeSlot; }
     public void setStatus(String status) { this.status = status; }
@@ -42,15 +40,13 @@ public class Booking {
     public void setUserName(String userName) { this.userName = userName; }
     
     public boolean requestBooking() {
-        // This method would typically interact with the database
-        // For now, we'll just update the status
+        
         this.status = "pending";
         return true;
     }
     
     public boolean cancelBooking() {
-        // This method would typically remove the booking from database
-        // For now, we'll just update the status
+        
         this.status = "cancelled";
         return true;
     }
