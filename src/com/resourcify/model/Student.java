@@ -30,7 +30,7 @@ public class Student extends User {
         
         if (success) {
             System.out.println("Booking request submitted successfully!");
-            System.out.println("Your booking is pending approval.");
+            System.out.println("Your booking is pending for approval.");
         } else {
             System.out.println("Failed to create booking. Resource might be already booked for this time slot.");
         }

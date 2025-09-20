@@ -350,9 +350,9 @@ public class ResourcifyApp {
         boolean availability = Boolean.parseBoolean(scanner.nextLine().trim());
         
         if (admin.updateResourceAvailability(resourceId, availability)) {
-            System.out.println("\n✓ Resource availability updated successfully!");
+            System.out.println("\n Resource availability updated successfully!");
         } else {
-            System.out.println("\n✗ Failed to update resource availability.");
+            System.out.println("\n Failed to update resource availability.");
         }
     }
     
@@ -389,9 +389,9 @@ public class ResourcifyApp {
         String role = roles[roleChoice - 1];
         
         if (admin.createUser(name, email, password, role)) {
-            System.out.println("\n✓ User account created successfully!");
+            System.out.println("\n User account created successfully!");
         } else {
-            System.out.println("\n✗ Failed to create user account. Email might already exist.");
+            System.out.println("\n Failed to create user account. Email might already exist.");
         }
     }
     
