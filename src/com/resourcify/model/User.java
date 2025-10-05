@@ -28,4 +28,14 @@ public abstract class User {
     public abstract boolean login(String email, String password);
     public abstract void logout();
     public abstract String getRole();
+    
+    @Override
+    public String toString() {
+        return "User{" +
+               "userId=" + userId +
+               ", name='" + name + '\'' +
+               ", email='" + email + '\'' +
+               ", role='" + getRole() + '\'' +
+               '}';
+    }
 }

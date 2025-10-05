@@ -7,8 +7,8 @@ import com.resourcify.model.*;
 
 public class DatabaseManager {
     private static final String URL = "jdbc:mysql://localhost:3306/resourcify_db";
-    private static final String USERNAME = "root"; // Change as per your MySQL setup
-    private static final String PASSWORD = "password"; // Change as per your MySQL setup
+    private static final String USERNAME = "root"; 
+    private static final String PASSWORD = "password"; 
     
     private static DatabaseManager instance;
     private Connection connection;
